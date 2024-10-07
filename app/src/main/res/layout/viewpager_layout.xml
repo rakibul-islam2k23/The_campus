@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieLayout"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_300sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lottieLayout"
+            android:text="Smart Attendance"
+            android:letterSpacing="0.04"
+            android:textStyle="bold"
+            android:padding="@dimen/_5sdp"
+            android:fontFamily="@font/bold"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/main_color"
+            />
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transform your attendance process with Smart Attendance!Say goodbye to manual roll calls and hello to real-time data insights!.Experience a seamless, hassle-free attendance system"
+            android:lineHeight="@dimen/_20sdp"
+            android:layout_below="@+id/heading"
+            android:letterSpacing="0.03"
+            android:fontFamily="@font/light"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="#B3000000"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

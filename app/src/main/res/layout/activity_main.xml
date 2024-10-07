@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        >
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/languageSwitch"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:lottie_rawRes="@raw/languageswitch"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/bold"
+            android:text="EN"
+            android:layout_below="@+id/languageSwitch"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="-20dp"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/skipButtonMainAc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="textEnd"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/medium"
+            android:text="Skip"
+            android:textColor="#E2824D"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerOfMainAc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/skipButtonMainAc"
+            android:layout_centerInParent="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/rightButtonMainAc"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_alignParentEnd="true"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/leftButtonMainAc"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/boardingleft_icon"
+            android:background="@drawable/boardingleft_background"
+            android:padding="@dimen/_5sdp"
+            android:visibility="invisible"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewPagerOfMainAc"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_40sdp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/rightButtonMainAc"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/boardingright_icon"
+            android:background="@drawable/boardingright_background"
+            android:padding="@dimen/_5sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_40sdp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_toEndOf="@id/leftButtonMainAc"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/rightButtonMainAc"
+            android:layout_below="@id/viewPagerOfMainAc"
+            android:layout_marginBottom="@dimen/_40sdp"
+            >
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
