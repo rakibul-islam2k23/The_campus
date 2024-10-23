@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -41,9 +41,10 @@
                 android:layout_marginBottom="@dimen/_20sdp"
                 >
                 <TextView
+                    android:id="@+id/registerBold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Login"
+                    android:text="Register"
                     android:textColor="@color/black"
                     android:fontFamily="@font/medium"
                     android:layout_below="@id/login_loffie"
@@ -55,7 +56,7 @@
                     android:id="@+id/registerMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Please login to continue"
+                    android:text="Please register to login"
                     android:textColor="#CB000000"
                     android:fontFamily="@font/medium"
                     android:layout_below="@id/registerBold"
@@ -71,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_below="@id/textLayout"
-                android:weightSum="2"
+                android:weightSum="4"
                 >
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -81,7 +82,31 @@
                     android:layout_marginBottom="@dimen/_10sdp"
                     >
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/loginGmail"
+                        android:id="@+id/regUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/login_textview_background"
+                        android:padding="@dimen/_12sdp"
+                        android:maxLines="1"
+                        android:fontFamily="@font/medium"
+                        android:textColorHint="#B3000000"
+                        android:inputType="text"
+                        android:drawableStart="@drawable/user_icon"
+                        android:drawablePadding="@dimen/_12sdp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regGmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Gmail"
@@ -107,7 +132,7 @@
                     android:longClickable="false"
                     >
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/loginPassword"
+                        android:id="@+id/regPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Password"
@@ -123,95 +148,105 @@
                         android:drawablePadding="@dimen/_12sdp"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/loginForget"
-                android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Forget password?"
-                android:layout_below="@id/editTextLayout"
-                android:textColor="@color/main_color"
-                android:fontFamily="@font/bold"
-                android:gravity="end"
-                android:textStyle="normal"
-                android:layout_alignParentEnd="true"
-                android:layout_marginLeft="-5dp"
-                android:padding="@dimen/_10sdp"
-                android:textSize="@dimen/_10sdp"
-                />
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_weight="1"
+                app:passwordToggleEnabled="true"
+                android:longClickable="false"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm password"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/login_textview_background"
+                    android:padding="@dimen/_12sdp"
+                    android:maxLines="1"
+                    android:fontFamily="@font/medium"
+                    android:textColorHint="#B3000000"
+                    android:inputType="textEmailAddress"
+                    android:drawableStart="@drawable/lock_icon"
+                    android:drawablePadding="@dimen/_12sdp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
 
         </RelativeLayout>
     </ScrollView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/scrollView"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_15sdp"
-        android:gravity="top"
-        android:layout_marginBottom="@dimen/_40sdp"
+        android:gravity="bottom"
+        android:layout_marginTop="@dimen/_30sdp"
         android:layout_alignParentEnd="true"
         >
         <RelativeLayout
-            android:id="@+id/signInLayout"
+            android:id="@+id/buttonLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/signup_background"
             >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/regSignUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bold"
+            android:letterSpacing="0.04"
+            android:background="@drawable/signup_background"
+            android:textAllCaps="false"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_14sdp"
+            />
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:indeterminateTint="@color/white"
+            />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/signInButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sign In"
-                android:textColor="@color/white"
-                android:fontFamily="@font/bold"
-                android:background="@drawable/signup_background"
-                android:letterSpacing="0.04"
-                android:textAllCaps="false"
-                android:padding="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                />
-            <ProgressBar
-                android:id="@+id/progressbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:visibility="gone"
-                android:indeterminateTint="@color/white"
-                />
         </RelativeLayout>
-
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/signInLayout"
+            android:layout_below="@+id/buttonLayout"
             android:gravity="center"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don`t have an Account?"
+                android:text="Already have an Account?"
                 android:textColor="#CB000000"
                 android:fontFamily="@font/light"
                 android:textStyle="normal"
                 android:padding="@dimen/_5sdp"
-                android:layout_toLeftOf="@+id/logInTextView"
+                android:layout_toLeftOf="@+id/regSignInTextView"
                 android:textSize="@dimen/_10sdp"
                 />
 
             <TextView
-                android:id="@+id/logInTextView"
+                android:id="@+id/regSignInTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="Sign In"
                 android:textColor="@color/main_color"
                 android:fontFamily="@font/bold"
                 android:textStyle="normal"

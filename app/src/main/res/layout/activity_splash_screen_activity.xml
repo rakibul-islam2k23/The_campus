@@ -8,24 +8,45 @@
     tools:context=".SplashScreenActivity">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        >
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="@dimen/_250sdp"
-            android:layout_height="@dimen/_250sdp"
-            app:lottie_rawRes="@raw/splashscreen_loading_loffie"
-            app:lottie_loop="true"
-            app:lottie_autoPlay="true"
+        <ImageView
+            android:id="@+id/splashIcon"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/splash_logo"
+            android:layout_centerInParent="true"
 
             />
-    </RelativeLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="from"
+            android:textColor="#7C000000"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/medium"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NGPI"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/bold"
+            android:layout_weight="1"
+            />
 
+    </LinearLayout>
 
 </RelativeLayout>
