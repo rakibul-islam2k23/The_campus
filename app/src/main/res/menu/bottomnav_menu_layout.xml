@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/homeblack_icon"
+        />
+    <item
+        android:id="@+id/classTime"
+        android:title="Class"
+        android:icon="@drawable/classblack_icon"
+        />
+    <item
+        android:id="@+id/job"
+        android:title="Job"
+        android:icon="@drawable/jobblack_icon"
+        />
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profileblack_icon"
+        />
+</menu>
