@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "610131334084",
+    "project_id": "the-campu",
+    "storage_bucket": "the-campu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610131334084:android:b44e194aab30a041140a91",
+        "android_client_info": {
+          "package_name": "com.example.the_campus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABFuX3vMbT9uBKW9t3BmpuOItaGaLqtUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
