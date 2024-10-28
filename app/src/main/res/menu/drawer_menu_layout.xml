@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/home_icon"
+            />
+        <item
+            android:id="@+id/buyBooks"
+            android:title="Buy Books"
+            android:icon="@drawable/bookstore_icon"
+            />
+        <item
+            android:id="@+id/sellBooks"
+            android:title="Sell Books"
+            android:icon="@drawable/sellbooks_icon"
+            />
+        <item
+            android:id="@+id/teacher"
+            android:title="Teacher"
+            android:icon="@drawable/teacher_icon"
+            />
+        <item
+            android:id="@+id/videoLectures"
+            android:title="Video Lecture"
+            android:icon="@drawable/videolecture_icon"
+            />
+        <item
+            android:id="@+id/saved"
+            android:title="PDF"
+            android:icon="@drawable/pdf_icon"
+            />
+
+        <item
+            android:id="@+id/payment"
+            android:title="Pay Semister fee"
+            android:icon="@drawable/pay_semister_fee"
+            />
+        <item android:title="Preferences">
+            <menu>
+                <group>
+                    <item
+                        android:id="@+id/setting"
+                        android:title="Settings"
+                        android:icon="@drawable/settings_icon"
+                        />
+                    <item
+                        android:id="@+id/developer"
+                        android:title="About Developer"
+                        android:icon="@drawable/devloper_icon"
+                        />
+                </group>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>

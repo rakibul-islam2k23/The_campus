@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.0"
+circleimageview = "3.1.0"
 firebaseBomVersion = "33.4.0"
 googleMaterial = "1.2.0-alpha02"
 googleMaterialVersion = "1.9.0"
@@ -18,6 +19,7 @@ firebaseAuth = "23.0.0"
 firebaseDatabase = "21.0.0"
 
 [libraries]
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 google-firebase-auth = { module = "com.google.firebase:firebase-auth" }
 google-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
